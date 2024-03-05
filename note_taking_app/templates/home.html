@@ -73,6 +73,9 @@
         .note-text {
             flex: 1;
             margin-right: 10px;
+            overflow: hidden; 
+            white-space: nowrap; 
+            text-overflow: ellipsis; 
         }
         
         h1 {
@@ -114,7 +117,7 @@
             <li>
                 <div class="note-text">{{ note }}</div>
                 <form action="/" method="POST">
-                    <button type="submit" class="delete-btn" name="delete_note" value="{{ note }}">X</button>
+                    <button type="submit" class="delete-btn" name="delete_note" value="{{ note }}" autocomplete="off">X</button>
                 </form>
             </li>
             {% endfor %}
